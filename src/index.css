@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* colors */
+  --bright-gray: #ededed;
+  --bright-gray-secondary: #eeeeee;
+  --cultured: #f5f8fa;
+  --ghost-white: #f9fbff;
+  --light-silver: #d8d8d8;
+  --sonic-silver: #747474;
+  --granite-gray: #65676b;
+  --taupe-gray: #878787;
+  --rocket-metallic: #8b8181;
+  --metallic-silver: #a7abb4;
+  --seashell: #fff7ef;
+  --eerie-black: #181818;
+  --jungle-green: #2a9d8f;
+  --celadon-green: #218075;
+  --medium-sea-green: #3eb75e;
+  --sandy-brown: #f4a261;
+  --quartz: #474758;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+input[type='checkbox'] {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  clip-path: polygon(20% 50%, 40% 70%, 85% 15%, 100% 30%, 40% 90%, 10% 60%);
+  transform: translate(-50%, -50%);
+  background-color: var(--jungle-green);
+}
+
+input[type='checkbox']:checked::before {
+  opacity: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
