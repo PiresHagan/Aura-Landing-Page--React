@@ -7,6 +7,10 @@ import ConversationPage from './pages/ConversationPage';
 import MainLanding from './landings/MainLanding';
 import TOS from './landings/TOS';
 import Privacy from './landings/Privacy';
+import ContactUs from './landings/ContactUs';
+import FAQs from './landings/FAQs';
+import LoginPage from './landings/LoginPage';
+import SignUpPage from './landings/SignUpPage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -38,6 +42,22 @@ const router = createBrowserRouter([
         path: '/landings/privacy',
         element: <Privacy />,
       },
+      {
+        path: '/landings/contact-us',
+        element: <ContactUs />,
+      },
+      {
+        path: '/landings/faqs',
+        element: <FAQs />,
+      },
+      {
+        path: '/landings/login',
+        element: <LoginPage />,
+      },
+      {
+        path: '/landings/signup',
+        element: <SignUpPage />,
+      }
     ],
   },
 ]);

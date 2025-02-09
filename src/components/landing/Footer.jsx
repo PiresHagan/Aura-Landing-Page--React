@@ -1,4 +1,5 @@
 import { useInView } from 'react-intersection-observer';
+import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 
@@ -13,6 +14,7 @@ import XIcon from '../icons/XIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 
 import SeparatorTopImg from '../../assets/images/landing/separator-top.svg';
+import SeparatorBottomSimpleImg from '../../assets/images/landing/separator-bottom-simple.svg';
 import FooterAnimationLineImage from '../../assets/images/landing/footer-line-anim.svg';
 
 const socialNetworksBaseClasses =
@@ -48,17 +50,31 @@ const socialNetworks = [
 
 const Footer = () => {
   const { ref, inView } = useInView({ threshold: 0.6 }); //
-
+  const location = useLocation();
+  const getSeparatorImage = () => {
+    // If we're on the login page
+    if (location.pathname === '/landings/login' || location.pathname === '/landings/signin') {
+      return SeparatorBottomSimpleImg; // Replace with your login page separator
+    }
+    // Default separator
+    return SeparatorTopImg;
+  };
+  const getSeparatorClassName = () => {
+    if (location.pathname === '/landings/login' || location.pathname === '/landings/signup') {
+      return 'absolute top-[-1px] max-1920:top-[-4vw]';
+    }
+    return 'w-full';
+  };
   const titleBaseClasses =
     'text-[var(--eerie-black)] font-medium text-lg leading-[22px] tracking-[1px]';
   const linkBaseClasses =
     'text-[var(--granite-gray)] text-sm hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out';
 
   return (
-    <footer ref={ref}>
+    <footer ref={ref} className='relative'>
       <img
-        className="w-full"
-        src={SeparatorTopImg}
+        className={getSeparatorClassName()}
+        src={getSeparatorImage()}
         alt=""
         role="presentation"
       />
