@@ -30,7 +30,7 @@ const SignUp = () => {
         >
             {/* Logo */}
             <div className="flex justify-center mb-3">
-                <img src={Logo} alt="Logo" className="w-40 h-40 rounded-2xl" />
+                <img src={Logo} alt="Logo" className="w-30 h-30 rounded-2xl" />
             </div>
 
             <div
