@@ -2,9 +2,14 @@ import { useState } from 'react';
 import SeparatorBottomImage from '../../../../assets/images/landing/separator-bottom.svg'
 import Subtitle from '../../Subtitle';
 import SectionTitle from '../../SectionTitle';
-
+import { useLocation } from 'react-router-dom';
 const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const location = useLocation();
+    const isFaqs = location.pathname === '/landings/faqs';
+
+
+
 
     const faqData = [
         {
@@ -38,12 +43,12 @@ const FaqSection = () => {
     return (
 
         <section className="mt-8 px-[70px] flex flex-col items-center max-1024:px-4 mb-[100px]">
-            <img src={SeparatorBottomImage} className="w-full" alt="" />
+            {!isFaqs && <img src={SeparatorBottomImage} className="w-full" alt="" />}
 
-            <div className="max-1024:hidden mt-20">
+            <div className={`max-1024:hidden ${!isFaqs && 'mt-20'}`}>
                 <Subtitle title="Pomoc" />
             </div>
-            <SectionTitle title="Często Zadawane Pytania" className="mt-8 text-[var(--quartz)] text-[52px] max-1024:mt-3" />
+            <SectionTitle title="Często Zadawane Pytania" className={`${!isFaqs ? 'mt-8' : 'mt-3'} text-[var(--quartz)] text-[44px] max-1024:mt-3`} />
             <div className="w-full max-w-[1024px] mt-8">
 
                 {faqData.map((faq, index) => (

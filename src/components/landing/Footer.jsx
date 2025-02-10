@@ -61,7 +61,7 @@ const Footer = () => {
   };
   const getSeparatorClassName = () => {
     if (location.pathname === '/landings/login' || location.pathname === '/landings/signup') {
-      return 'absolute top-[-1px] max-1920:top-[-4vw]';
+      return 'absolute left-0 top-[-5vw] max-892:top-[-4vw] w-full z-10';
     }
     return 'w-full';
   };
@@ -72,14 +72,14 @@ const Footer = () => {
 
   return (
     <footer ref={ref} className='relative'>
-      <img
-        className={getSeparatorClassName()}
-        src={getSeparatorImage()}
-        alt=""
-        role="presentation"
-      />
 
       <div className="py-5 px-14 max-1024:px-4 max-1024:pt-7 max-1024:pb-12">
+        <img
+          className={getSeparatorClassName()}
+          src={getSeparatorImage()}
+          alt=""
+          role="presentation"
+        />
         <div className="flex flex-col justify-center items-center">
           <img
             className='max-1024:w-[180px] max-1024:h-auto"'
@@ -89,7 +89,7 @@ const Footer = () => {
             alt="nowAura logo"
           />
 
-          <p className="text-[var(--granite-gray)] text-center mt-4 text-xl max-1024:mt-3">
+          <p className="text-[var(--granite-gray)] text-center mt-4 text-base sm:text-xl max-1024:mt-3">
             Zbuduj AURĘ wokół siebie i odkryj jak komunikacja może być <br />{' '}
             Twoim najpotężniejszym narzędziem.
           </p>
@@ -226,7 +226,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-[var(--metallic-silver)] text-sm">
+        {/* <p className="text-[var(--metallic-silver)] text-sm">
           <sup>(1)</sup>
           Johnson & Johnson Institute & Osso VR: Enhancing surgical training,{' '}
           <a
@@ -236,7 +236,7 @@ const Footer = () => {
           >
             https://virtualspeech.com/blog/vr-training-case-studies
           </a>
-        </p>
+        </p> */}
 
         <p className="mt-12 text-[var(--granite-gray)] text-center text-sm">
           Copyright © 2024{' '}
