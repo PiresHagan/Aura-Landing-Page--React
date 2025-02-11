@@ -148,7 +148,7 @@ const SignUp = () => {
 
             {/* Register Link */}
             <p className="text-center mt-6 text-sm text-gray-600">
-                Nie masz jeszcze konta?{' '}
+                Masz już konto?{' '}
                 <a href="#" className="font-bold hover:underline">
                     Zaloguj się
                 </a>
