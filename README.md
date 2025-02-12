@@ -1,3 +1,9 @@
+# Hello Pawel,
+# Currently, I can't keep communication with you on Upwork due to my account issue.
+# In the meantime, can we continue to discuss on chat apps like WhatsApp skype, or Telegram?
+# Please leave your contact address.
+# I'd like to work with you continuously.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
