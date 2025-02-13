@@ -69,17 +69,17 @@ const Footer = () => {
     'text-[var(--eerie-black)] font-medium text-lg leading-[22px] tracking-[1px]';
   const linkBaseClasses =
     'text-[var(--granite-gray)] text-sm hover:text-[var(--sandy-brown)] transition duration-200 ease-in-out';
-
+  const isLoginOrSignupPage = location.pathname === '/landings/login' || location.pathname === '/landings/signup';
   return (
     <footer ref={ref} className='relative'>
 
       <div className="py-5 px-14 max-1024:px-4 max-1024:pt-7 max-1024:pb-12">
-        <img
+        {!isLoginOrSignupPage && <img
           className={getSeparatorClassName()}
           src={getSeparatorImage()}
           alt=""
           role="presentation"
-        />
+        />}
         <div className="flex flex-col justify-center items-center">
           <img
             className='max-1024:w-[180px] max-1024:h-auto"'
