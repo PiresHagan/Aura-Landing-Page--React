@@ -41,10 +41,10 @@ const ContactUs = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 px-4 lg:px-0">
                     <motion.div
                         // className="max-w-[600px] mx-auto p-8 bg-white rounded-2xl shadow-lg"
-                        className="max-w-[800px] lg:col-span-2 rounded-2xl shadow-lg mx-auto p-8 bg-white rounded-2xl"
+                        className="w-full lg:max-w-[800px] lg:col-span-2 rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.1)] p-4 lg:p-8 bg-white"
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
@@ -57,7 +57,7 @@ const ContactUs = () => {
                         </motion.h2>
                         <ContactForm />
                     </motion.div>
-                    <div className="lg:col-span-1">
+                    <div className="lg:col-span-1 w-full">
                         <ContactSidebar />
                     </div>
                 </div>
