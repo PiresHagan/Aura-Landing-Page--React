@@ -20,7 +20,7 @@ const SignUpPage = () => {
         return 'w-full';
     };
     return (
-        <div className="relative bg-gradient-to-br from-[#2A9D8F] to-[#F4A261] py-16 px-4 pb-[110px]">
+        <div className="relative bg-gradient-to-br from-[#2A9D8F] to-[#F4A261] py-12 px-4 pb-[80px]">
             {isLoginOrSignupPage && <img
                 className={getSeparatorClassName()}
                 src={getSeparatorImage()}
